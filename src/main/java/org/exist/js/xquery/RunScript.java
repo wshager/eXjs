@@ -3,8 +3,7 @@ package org.exist.js.xquery;
 import org.exist.dom.QName;
 import org.exist.xquery.*;
 import org.exist.xquery.value.*;
-import org.mozilla.javascript.Context;
-import org.mozilla.javascript.Scriptable;
+import org.mozilla.javascript.*;
 
 public class RunScript extends BasicFunction {
 	public final static FunctionSignature signature = 
@@ -42,7 +41,8 @@ public class RunScript extends BasicFunction {
 			Object result = cx.evaluateString(scope, s, "<cmd>", 1, null);
 			// Convert the result to a string and print it.
 			return new StringValue(Context.toString(result));
-			
+		} catch(Exception e) {
+			e.printStackTrace();
 		} finally {
 			// Exit from the context.
 			Context.exit();
