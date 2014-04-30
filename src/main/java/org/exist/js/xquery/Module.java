@@ -31,6 +31,8 @@ public class Module extends AbstractInternalModule {
 	
 	public final static String NAMESPACE_URI = "http://exist-db.org/js";
 	public final static String PREFIX = "js";
+	private final static String RELEASED_IN_VERSION = "eXist-2.0";
+	private final static String DESCRIPTION = "Module for interacting with javascript.";
 	
 	private final static FunctionDef[] functions = {
 		new FunctionDef(RunScript.signature, RunScript.class),
@@ -40,27 +42,23 @@ public class Module extends AbstractInternalModule {
 		super(functions, parameters);
 	}
 
-	@Override
-	public String getDefaultPrefix() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String getDescription() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
+//	@Override
 	public String getNamespaceURI() {
-		// TODO Auto-generated method stub
-		return null;
+		return NAMESPACE_URI;
 	}
 
-	@Override
+//	@Override
+	public String getDefaultPrefix() {
+		return PREFIX;
+	}
+
+//	@Override
+	public String getDescription() {
+		return DESCRIPTION;
+	}
+
+//	@Override
 	public String getReleaseVersion() {
-		// TODO Auto-generated method stub
-		return null;
+		return RELEASED_IN_VERSION;
 	}
 }
