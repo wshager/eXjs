@@ -47,5 +47,6 @@ public class RunScript extends BasicFunction {
 			// Exit from the context.
 			Context.exit();
 		}
+		return new StringValue("");
 	}
 }
