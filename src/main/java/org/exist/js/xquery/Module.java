@@ -42,22 +42,23 @@ public class Module extends AbstractInternalModule {
 		super(functions, parameters);
 	}
 
-//	@Override
+
+	@Override
 	public String getNamespaceURI() {
 		return NAMESPACE_URI;
 	}
 
-//	@Override
+	@Override
 	public String getDefaultPrefix() {
 		return PREFIX;
 	}
 
-//	@Override
+	@Override
 	public String getDescription() {
 		return DESCRIPTION;
 	}
 
-//	@Override
+	@Override
 	public String getReleaseVersion() {
 		return RELEASED_IN_VERSION;
 	}
