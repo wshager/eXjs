@@ -10,7 +10,7 @@ public class RunScript extends BasicFunction {
 	public final static FunctionSignature signature = 
 	new FunctionSignature(
 		new QName("run", Module.NAMESPACE_URI, Module.PREFIX),
-		"A useless example function. It just echoes the input parameters.",
+		"Run javascript from xquery.",
 		new SequenceType[] { 
 			new FunctionParameterSequenceType("text", Type.STRING, Cardinality.ZERO_OR_MORE, "The script to run")
 		},
